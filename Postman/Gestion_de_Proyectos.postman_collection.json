@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "c697956d-bccf-4d0d-9aec-9a44448c4f33",
+		"name": "Gestion_de_Proyectos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Crear_Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Arlie\",\r\n    \"password\":\"arliedts\",\r\n    \"correo\":\"dannaarlie2003@gmail.com\",\r\n    \"rol\":\"USER_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todos los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener usuario -id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/usuarios/64a1b444ba547a10c89ca946",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"usuarios",
+								"64a1b444ba547a10c89ca946"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar usuario -id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGExYjQ0NGJhNTQ3YTEwYzg5Y2E5NDYiLCJpYXQiOjE2ODgzMjAxNTIsImV4cCI6MTY4ODMzNDU1Mn0.M0y_uBOVFyBFx8_W1rEuOAd7pobVXTB70ss_l1-kpI8",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"adrian\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/usuarios/64a1b444ba547a10c89ca946?x-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGExYjQ0NGJhNTQ3YTEwYzg5Y2E5NDYiLCJpYXQiOjE2ODgzMjAxNTIsImV4cCI6MTY4ODMzNDU1Mn0.M0y_uBOVFyBFx8_W1rEuOAd7pobVXTB70ss_l1-kpI8",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"usuarios",
+								"64a1b444ba547a10c89ca946"
+							],
+							"query": [
+								{
+									"key": "x-token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGExYjQ0NGJhNTQ3YTEwYzg5Y2E5NDYiLCJpYXQiOjE2ODgzMjAxNTIsImV4cCI6MTY4ODMzNDU1Mn0.M0y_uBOVFyBFx8_W1rEuOAd7pobVXTB70ss_l1-kpI8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar usuario -id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGExYjQ0NGJhNTQ3YTEwYzg5Y2E5NDYiLCJpYXQiOjE2ODgzMjAxNTIsImV4cCI6MTY4ODMzNDU1Mn0.M0y_uBOVFyBFx8_W1rEuOAd7pobVXTB70ss_l1-kpI8",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8088/api/usuarios/64a1b444ba547a10c89ca946?x-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGExYjQ0NGJhNTQ3YTEwYzg5Y2E5NDYiLCJpYXQiOjE2ODgzMjAxNTIsImV4cCI6MTY4ODMzNDU1Mn0.M0y_uBOVFyBFx8_W1rEuOAd7pobVXTB70ss_l1-kpI8",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"usuarios",
+								"64a1b444ba547a10c89ca946"
+							],
+							"query": [
+								{
+									"key": "x-token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGExYjQ0NGJhNTQ3YTEwYzg5Y2E5NDYiLCJpYXQiOjE2ODgzMjAxNTIsImV4cCI6MTY4ODMzNDU1Mn0.M0y_uBOVFyBFx8_W1rEuOAd7pobVXTB70ss_l1-kpI8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login de Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correo\":\"salgadoadrian2001@gmail.com\",\r\n    \"password\":\"adriansh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tarea",
+			"item": [
+				{
+					"name": "Obtener todas las tareas ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/tareas",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"tareas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener tarea -id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/tareas/987665",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"tareas",
+								"987665"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Tarea",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGExYjQ0NGJhNTQ3YTEwYzg5Y2E5NDYiLCJpYXQiOjE2ODg1MTE1NTIsImV4cCI6MTY4ODUyNTk1Mn0.m9LYJLv18oBTqVsreuYfji7JgOLsTZA5A3a5G7HujFA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_usuario\":\"64a1b50dba547a10c89ca94e\",\r\n    \"descripcion\":\"Subir el proyecto para internet\",\r\n    \"fecha\":\"15-9-2023\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/tareas/64a1b444ba547a10c89ca946",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"tareas",
+								"64a1b444ba547a10c89ca946"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar tarea -id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGExYjQ0NGJhNTQ3YTEwYzg5Y2E5NDYiLCJpYXQiOjE2ODg1MzcxMTYsImV4cCI6MTY4ODU1MTUxNn0.oTy8cX6XxkQ634AbF4oLvkRgvB4Z66y-LqXNGqeBgw0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_usuario\":\"64a1b444ba547a10c89ca946\",\r\n    \"porciento\":50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/tareas/64a4ad7236fe1c2660261550",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"tareas",
+								"64a4ad7236fe1c2660261550"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Asiganacion de Tarea -id_tarea -id_usuaario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGExYjQ0NGJhNTQ3YTEwYzg5Y2E5NDYiLCJpYXQiOjE2ODg1NTg4ODUsImV4cCI6MTY4ODU3MzI4NX0.3Ocj7szZPYH_4EuM4le4TFWS6phpo8H2-lg2r80ayTM",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_usuario\":\"64a1b444ba547a10c89ca946\",\r\n    \"porciento\":50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/tareas/64a4ad7236fe1c2660261550",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"tareas",
+								"64a4ad7236fe1c2660261550"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar tarea -id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NGExYjQ0NGJhNTQ3YTEwYzg5Y2E5NDYiLCJpYXQiOjE2ODg1NzYwMzgsImV4cCI6MTY4ODU5MDQzOH0.Rycmkom9aJ8-5RYbLjc4FYg4wc_OjOrg0qrat7crd8I",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8088/api/tareas/64a4ad7236fe1c2660261550",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"tareas",
+								"64a4ad7236fe1c2660261550"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
